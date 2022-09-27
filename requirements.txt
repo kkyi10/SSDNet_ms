@@ -5,5 +5,4 @@ Pillow
 numpy
 pyyaml
 onnxruntime-gpu
-
-pip --default-timeout=100 install pip ml-collections -i http://pypi.douban.com/simple/ --trusted-host pypi.douban.com
+ml-collections 

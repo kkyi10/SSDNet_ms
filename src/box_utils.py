@@ -1,13 +1,10 @@
 
-
 """Bbox utils"""
-
 import math
 import itertools as it
 import numpy as np
 from src.config import get_config
 from src.anchor_generator import GridAnchorGenerator
-
 
 config = get_config()
 
@@ -19,6 +16,7 @@ class GeneratDefaultBoxes():
     `self.default_boxes_tlbr` has a shape as `self.default_boxes`, the last dimension is [y1, x1, y2, x2].
     """
     def __init__(self):
+        # print(config)
         fk = config.img_shape[0] / np.array(config.steps)
         scale_rate = (config.max_scale - config.min_scale) / (len(config.num_default) - 1)
         scales = [config.min_scale + scale_rate * i for i in range(len(config.num_default))] + [1.0]
