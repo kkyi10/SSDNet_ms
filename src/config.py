@@ -11,8 +11,7 @@ def get_config():
     # ==============================================================================
     # Training options
     config.img_shape= [300, 300]
-    # config.num_ssd_boxes= 8732
-    config.num_ssd_boxes= 7308
+    config.num_ssd_boxes= 8732
 
     config.match_threshold= 0.5
     config.nms_threshold= 0.6
@@ -28,13 +27,12 @@ def get_config():
     config.device_target = 'GPU'
     config.run_eval = True
     # network
-    # config.num_default= [4, 6, 6, 6, 4, 4]
-    config.num_default = [3, 6, 6, 6, 6, 6]
+    config.num_default= [4, 6, 6, 6, 4, 4]
     config.extras_ratio= [0.2, 0.2, 0.2, 0.25, 0.5, 0.25]
     config.feature_size= [38, 19, 10, 5, 3, 1]
     config.min_scale= 0.1
     config.max_scale= 0.95
-    config.aspect_ratios= [[], [2, 3], [2, 3], [2, 3], [2, 3], [2, 3]]
+    config.aspect_ratios= [[2], [2, 3], [2, 3], [2, 3], [2], [2]]
     config.steps= [8, 16, 32, 64, 100, 300]
     config.prior_scaling= [0.1, 0.2]
     config.gamma= 2.0
