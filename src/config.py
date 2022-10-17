@@ -2,10 +2,11 @@ import ml_collections
 
 def get_config():
     config = ml_collections.ConfigDict()
-    config.data_path= "/media/su/sdisk/mindspore/ssd_ms/mini_dataset/"
+    config.data_path= "/home/ll/ms-redpanda/ssd_ms/mini_dataset/"
     config.output_path= "./cache/train"
     config.load_path= "./cache/checkpoint_path/"
     config.checkpoint_path= "./checkpoint/"
+    config.checkpoint_file_path = "./cache/train/ckpt_0/ssd-60_9.ckpt"
 
 
     # ==============================================================================
@@ -40,7 +41,7 @@ def get_config():
 
     config.dataset= "coco"
     config.lr= 0.05
-    # config.device_id= 0
+    config.device_id= 0
     # config.device_num= 1
     config.epoch_size= 60
     config.batch_size= 5
@@ -51,7 +52,7 @@ def get_config():
     config.eval_interval= 2
 
     config.mindrecord_dir= "MindRecord_COCO"
-    config.coco_root= "/media/su/sdisk/mindspore/ssd/mini_dataset/"
+    config.coco_root= "/home/ll/ms-redpanda/ssd_ms/mini_dataset/"
     config.train_data_type= "train2017"
     config.val_data_type= "val2017"
     config.instances_set= "annotations/instances_{}.json"
