@@ -2,7 +2,7 @@ import ml_collections
 
 def get_config():
     config = ml_collections.ConfigDict()
-    config.data_path= "../datasets/"
+    config.data_path= "./datasets/"
     config.output_path= "./cache/train"
     config.load_path= "./cache/checkpoint_path/"
     config.checkpoint_path= "./checkpoint/"
@@ -52,7 +52,7 @@ def get_config():
     config.eval_interval= 2
 
     config.mindrecord_dir= "MindRecord_COCO"
-    config.coco_root= "../dataset/"
+    config.coco_root= "./dataset/"
     config.train_data_type= "train2017"
     config.val_data_type= "val2017"
     config.instances_set= "annotations/instances_{}.json"
