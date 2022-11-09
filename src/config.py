@@ -52,7 +52,7 @@ def get_config():
     config.eval_interval= 2
 
     config.mindrecord_dir= "MindRecord_COCO"
-    config.coco_root= "" 
+    config.coco_root= "./datasets/" 
     config.train_data_type= "train2017"
     config.val_data_type= "val2017"
     config.instances_set= "annotations/instances_{}.json"
