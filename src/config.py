@@ -9,7 +9,7 @@ def get_config():
     config.checkpoint_file_path = "./cache/train/ckpt_0/ssd-60_9.ckpt"
 
 
-    # ==============================================================================
+    # ====================================
     # Training options
     config.img_shape= [300, 300]
     config.num_ssd_boxes= 8732
